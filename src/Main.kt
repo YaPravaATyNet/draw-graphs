@@ -5,7 +5,7 @@ fun main() {
     val b = graph.addNode("b")
     val c = graph.addNode("c")
     val d = graph.addNode("d")
-    var e = graph.addNode("d")
+    var e = graph.addNode("e")
     graph.addEdge(a, b)
     graph.addEdge(a, c)
     graph.addEdge(a, d)

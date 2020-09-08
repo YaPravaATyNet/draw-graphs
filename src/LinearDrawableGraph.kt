@@ -4,8 +4,8 @@ abstract class LinearDrawableGraph(directed: Boolean) : Graph(directed), Drawabl
     protected var factor = 3
     protected var fixed = false
     protected var offset = 0
-    protected var EdgeView = EdgeViewSimple
-    protected var NodeView = NodeViewBrackets
+    protected var edgeView: EdgeView = EdgeViewSimple
+    protected var nodeView: NodeView = NodeViewBrackets
     
     private val linesNum = mutableMapOf<Node, Pair<Int, Int>>()
     protected val lines = mutableListOf<String>()
@@ -68,7 +68,7 @@ abstract class LinearDrawableGraph(directed: Boolean) : Graph(directed), Drawabl
         //TODO manyline nodes
         val indent = " ".repeat(offset)
         for (node in nodes) {
-            val text = NodeView.LEFT_BORDER + node.text + NodeView.RIGHT_BORDER
+            val text = nodeView.LEFT_BORDER + node.text + nodeView.RIGHT_BORDER
             if (text.length > maxLineLength) {
                 maxLineLength = text.length
             }
