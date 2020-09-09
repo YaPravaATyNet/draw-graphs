@@ -1,4 +1,9 @@
-abstract class LinearDrawableGraph(directed: Boolean) : Graph(directed), DrawableGraph {
+import views.EdgeView
+import views.EdgeViewSimple
+import views.NodeView
+import views.NodeViewBrackets
+
+abstract class LinearDrawableGraph(directed: Boolean) : SimpleGraph(directed), DrawableGraph {
     //TODO: non-directed
     protected var startIndent = 6
     protected var factor = 3

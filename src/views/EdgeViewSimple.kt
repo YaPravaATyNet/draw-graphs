@@ -1,3 +1,5 @@
+package views
+
 object EdgeViewSimple: EdgeView {
     override val H_BAR = '─'
     override val V_BAR = '│'

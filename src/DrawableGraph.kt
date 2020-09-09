@@ -1,3 +1,3 @@
-interface DrawableGraph {
+interface DrawableGraph: Graph {
     fun draw(): String
 }

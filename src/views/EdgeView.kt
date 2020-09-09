@@ -1,3 +1,5 @@
+package views
+
 interface EdgeView {
     val H_BAR: Char
     val V_BAR: Char
